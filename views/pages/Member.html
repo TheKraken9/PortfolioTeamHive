@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../assets/js/index.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/Member.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <a href="homepage.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i
+            class="ti-shift-left-alt"></i> Global Team</a>
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light userFacebook"><i class="ti-facebook"
+                            aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light userGitHub"><i class="ti-github"
+                            aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light userLinkedIn"><i class="ti-linkedin"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="header-content">
+                <h4 class="header-subtitle">Hello, I am</h4>
+                <h1 class="header-title userName"></h1>
+                <h6 class="header-mono userProfession"></h6>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img class="brand-img" id="userPfp">
+                    <li class="brand-txt">
+                        <h5 class="brand-title userName"></h5>
+                        <div class="brand-subtitle userProfession"></div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Who am I ?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3 userProfession_Location">A Web Designer / Developer Located In Our Lovely Earth</h5>
+                <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit amet, Qui deserunt consequatur fugit repellendusillo voluptas?</p>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birthdate</span> : <span class="userBirthDay"></span></li>
+                    <li><span>Email</span> : <span class="userMail"></span></li>
+                    <li><span>Phone</span> : <span class="userNumber"></span></li>
+                </ul>
+                <ul class="social-icons pt-3">
+                    <li class="social-item"><a class="social-link text-light userFacebook"><i class="ti-facebook"
+                                aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link text-light userGitHub"><i class="ti-github"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li class="social-item"><a class="social-link text-light userLinkedIn"><i class="ti-linkedin"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Experience</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Backend Developer</h6>
+                        <p class="subtitle"> exercitat Repellendus, corrupt.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Web Development</h6>
+                        <p class="subtitle">Lorem ipsum dolor sit consectetur.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Network & System administration</h6>
+                        <p class="subtitle">voluptate commodi illo voluptatib.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Resume Section-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Education</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body" id="parcours"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Skills</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body pb-2" id="skills 0"></div>
+                    </div>
+                </div>
+                <div class="card col-md-6 col-lg-4">
+                    <div class="card-header">
+                        <div class="pull-left">
+                            <h4 class="mt-2">Languages</h4>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="card-body pb-2" id="skills 1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 col-lg-4">
+                    <div class="row ">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">500</h1>
+                            <p class="text-light mb-1">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">50K</h1>
+                            <p class="text-light mb-1">Project Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">2k</h1>
+                            <p class="text-light mb-1">Coffee Drinked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="service">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Projects</h2>
+            <div class="row" id="projects"></div>
+        </div>
+    </section>
+
+    <div class="section contact" id="contact">
+        <div id="map" class="map"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id=" placeholder=" Message * " rows="7 "
+                                    required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit " class="form-control btn btn-primary ">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="contact-info-card ">
+                        <h4 class="contact-title ">Get in touch</h4>
+                        <div class="row mb-2 ">
+                            <div class="col-1 pt-1 mr-1 ">
+                                <i class="ti-mobile icon-md "></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline ">Phone : <br> <span class="text-muted userNumber "></span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2 ">
+                            <div class="col-1 pt-1 mr-1 ">
+                                <i class="ti-envelope icon-md "></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline ">Email :<br> <span
+                                        class="text-muted userMail ">info@website.com</span></h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4 ">
+                            <li class="social-item "><a class="social-link text-light userFacebook "><i
+                                        class="ti-facebook " aria-hidden="true "></i></a></li>
+                            <li class="social-item "><a class="social-link text-light userGitHub "><i class="ti-github "
+                                        aria-hidden="true "></i></a>
+                            </li>
+                            <li class="social-item "><a class="social-link text-light userLinkedIn "><i
+                                        class="ti-linkedin " aria-hidden="true "></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js "></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js "></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="../assets/vendors/bootstrap/bootstrap.affix.js "></script>
+
+    <!-- Isotope  -->
+    <script src="../assets/vendors/isotope/isotope.pkgd.js "></script>
+
+</body>
+
+</html>

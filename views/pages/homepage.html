@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Expanding Portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../assets/imgs/hive.png" />
+<link href="../assets/css/homepage.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<script src="../assets/js/display.js"></script>
+<script>
+  var debriefListe=null;
+    window.addEventListener("load",()=>{
+    var xhr0; 
+    try {  xhr0 = new ActiveXObject('Msxml2.XMLHTTP');   }
+    catch (e) 
+    {
+        try {   xhr0 = new ActiveXObject('Microsoft.XMLHTTP'); }
+        catch (e2) 
+        {
+           try {  xhr0 = new XMLHttpRequest();  }
+           catch (e3) {  xhr = false;   }
+         }
+    }
+    xhr0.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            localStorage.setItem("prepared_data",this.responseText);
+            window.location.href = "./home.html";
+       }
+    }
+    xhr0.open("GET","../../controllers/UserDebrief.php");
+    xhr0.send(null);
+  });
+</script>
+<body>
+<div id="content">
+    <h1><a href="#"><span>H</span>ive</a></h1>
+    <ul id="menu">
+        <li><a href="#">home</a></li>
+        <li><a class="current" href="#">projects</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">contact us</a></li>
+    </ul>
+    <div id="pitch">
+    <div id="pitch-left"> <img src="../assets/imgs/Quotes.png" alt="" />
+      
+    </div>
+    <div id="pitch-right">
+    <div id="caption"> <span></span>
+        <h2>Featured Project</h2>
+    </div>
+      <div class="templ"> <img src="../assets/imgs/templ.jpg" alt="" /> <a class="zoom" href="#" /></a> </div>
+      <div class="tempr"> <img src="../assets/imgs/templ.jpg" alt="" /> <a class="zoom" href="#" /></a> </div>
+      <p id="expl">Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida.</p>
+      <p><a id="browse" onclick="sendData(1)">Browse Projects</a></p>
+    </div>
+  </div>
+  <div id="wrapper">
+  <!-- <div class="col">
+    <div class="profil"></div> 
+    <h2>Harivony Ellias</h2>
+    <p>Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
+    <a class="more" href="#">read more</a>
+  </div>
+  <div class="col last">
+    <div class="profil"></div> <h2>Harivony Ellias</h2>
+    <p>Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
+    <a class="more" href="#">read more</a> 
+  </div> -->
+  </div>
+  <div class="line"></div>
+  <div id="lists">
+    <ul>
+      <li class="title">Consulting</li>
+      <li>iaculis urna vel</li>
+      <li>leo a ligula euismod</li>
+      <li>natoque penatibus et magnis</li>
+      <li>fermentum a eleifend non</li>
+      <li>quisque vel lorem eu</li>
+    </ul>
+    <ul>
+      <li class="title">Management</li>
+      <li>aliquam erat volutpat</li>
+      <li>rhoncus sit amet</li>
+      <li>sociis natoque penatibus</li>
+      <li>erat neque vitae</li>
+    </ul>
+    <ul class="last">
+      <li class="title">Estimation</li>
+      <li>natoque penatibus et</li>
+      <li>consectetur adipiscing elit</li>
+      <li>eget nunc libero</li>
+    </ul>
+    <div class="x"></div>
+  </div>
+  <div id="quote">
+    <p>Nunc eget nunc libero. Nunc commodo euismod massa quis vestibulum. Quisque vel lorem eu libero laoreet facilisis. Aenean plac, ligula quis placerat iaculis, mi magna luctus.</p>
+    <p id="author">&not; Commodo Euismod</p>
+  </div>
+  <div id="footer">
+    <p id="flinks"><a href="#">Become a fan on Facebook</a> &middot; <a href="#">Follow us on Twitter</a> &middot; <a href="#">RSS</a></p>
+    <!-- <p>Copyright &copy; 2009 EXPANDING PORTFOLIO &minus; Design: Luka Cvrk, <a href="http://www.solucija.com/">Solucija</a></p> -->
+  </div>
+</div>
+</body>
+</html>
+<script>
+  function sendData(id) {
+    var xhr; 
+    try {  xhr = new ActiveXObject('Msxml2.XMLHTTP');   }
+    catch (e) 
+    {
+        try {   xhr = new ActiveXObject('Microsoft.XMLHTTP'); }
+        catch (e2) 
+        {
+           try {  xhr = new XMLHttpRequest();  }
+           catch (e3) {  xhr = false;   }
+         }
+    }
+    let destination="../../controllers/AllUserInformation.php?id="+id;
+    xhr.open("GET",destination);
+    xhr.send(null);
+    // Définissez ce qui se passe si la soumission s'est opérée avec succès
+    xhr.addEventListener("load", function(event) {
+      localStorage.setItem('allUserInformation',event.target.responseText);
+      window.location.href = "Member.html";
+    });
+    // Definissez ce qui se passe en cas d'erreur
+    xhr.addEventListener("error", function(event) {
+      alert('Oups! Quelque chose s\'est mal passé.');
+    });
+  }
+</script>

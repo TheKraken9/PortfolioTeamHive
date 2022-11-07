@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Hive Portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../assets/imgs/hive.png" />
+<link href="../assets/css/homepage.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<script src="../assets/js/display.js"></script>
+<script>
+    var user = JSON.parse(localStorage.getItem("prepared_data"));
+    window.addEventListener("load",()=>{
+        displayDebriefs(user);
+    });
+</script>
+<body>
+<div id="content">
+    <h1><a href="#"><span>H</span>ive</a></h1>
+    
+    <div id="pitch">
+    <div id="pitch-left"> <img src="../assets/imgs/Quotes.png" alt="" />
+      
+    </div>
+    <div id="pitch-right">
+    <div id="caption"> <span></span>
+        <h2>Featured Project</h2>
+    </div>
+      <div class="templ"> <img src="../assets/imgs/templ.jpg" alt="" /> <a class="zoom" href="#" /></a> </div>
+      <div class="tempr"> <img src="../assets/imgs/templ.jpg" alt="" /> <a class="zoom" href="#" /></a> </div>
+      <p id="expl">Our future projects together belongs here, don't worry it will be sooner than in your thought...</p>
+      <p><a id="browse">Coming soon...</a></p>
+    </div>
+  </div>
+  <div id="wrapper">
+  </div>
+  <div class="line"></div>
+  <div id="lists">
+    <ul>
+      <li class="title">Consulting</li>
+      <li>Projects</li>
+      <li>Devis</li>
+      <li>Assistance</li>
+    </ul>
+    <ul>
+      <li class="title">Management</li>
+      <li>Methods</li>
+      <li>Thinking</li>
+      <li>State of mind</li>
+      <li>Strategy</li>
+    </ul>
+    <ul class="last">
+      <li class="title">Estimation</li>
+      <li>Monetisation</li>
+      <li>Devise</li>
+    </ul>
+    <div class="x"></div>
+  </div>
+  <div id="quote">
+    <p>Hive,High Imagination for Valuable Evolution.</p>
+    <p id="author">&not; Hive group</p>
+  </div>
+  <div id="footer">
+    <p id="flinks"><a href="#">Become a fan on Facebook</a> &middot; <a href="#">Follow us on Twitter</a> &middot; <a href="#">HIVE 2022</a></p>
+  </div>
+</div>
+</body>
+</html>
+<script>
+  function sendData(id) {
+    var xhr; 
+    try {  xhr = new ActiveXObject('Msxml2.XMLHTTP');   }
+    catch (e) 
+    {
+        try {   xhr = new ActiveXObject('Microsoft.XMLHTTP'); }
+        catch (e2) 
+        {
+           try {  xhr = new XMLHttpRequest();  }
+           catch (e3) {  xhr = false;   }
+         }
+    }
+    let destination="../../controllers/AllUserInformation.php?id="+id;
+    xhr.open("GET",destination);
+    xhr.send(null);
+    // Définissez ce qui se passe si la soumission s'est opérée avec succès
+    xhr.addEventListener("load", function(event) {
+      localStorage.setItem('allUserInformation',event.target.responseText);
+      window.location.href = "Member.html";
+    });
+    // Definissez ce qui se passe en cas d'erreur
+    xhr.addEventListener("error", function(event) {
+      alert('Oups! Quelque chose s\'est mal passé.');
+    });
+  }
+</script>
